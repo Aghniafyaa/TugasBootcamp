@@ -1,0 +1,17 @@
+{
+    "name" : "saucedemo-ui-automation",
+    "version": "1.0.0",
+    "description": "Tugas 9",
+    "scripts": {
+        "test": "mocha test --recursive --timeout 60000 --reptorter mochawesome"
+    },
+    "dependencies": {
+        "selenium-webdriver": "^4.45.0"
+    },
+    "devDependencies": {
+        "mocha": "^11.7.6",
+        "mochawesome": "^7.1.4",
+        "mocha-simple-html-reporter": "^2.0.0"
+
+    }
+}
