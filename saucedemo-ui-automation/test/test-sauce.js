@@ -2,9 +2,19 @@ const { Builder, By, until } = require('selenium-webdriver')
 const assert = require('assert');
 
 describe('Sauce Demo Test', function(){
+     let driver;
+
+    beforeEach(async function () {
+        driver = await new Builder().forBrowser('chrome').build();
+        await driver.get('https://www.saucedemo.com');
+    });
+
+    afterEach(async function () {
+        await driver.quit();
+    });
+
 
     it ('Sukses Login', async function(){
-        let driver = await new Builder().forBrowser('chrome').build();
 
         await driver.get('https://www.saucedemo.com');
 
@@ -24,12 +34,9 @@ describe('Sauce Demo Test', function(){
         console.log('Login berhasil');
 
         await driver.sleep(2000);
-        await driver.quit();
 
     });
     it('Urutkan Produk dari A-Z', async function () {
-
-        let driver = await new Builder().forBrowser('chrome').build();
 
         await driver.get('https://www.saucedemo.com');
 
@@ -71,6 +78,5 @@ describe('Sauce Demo Test', function(){
         console.log('Sort A-Z berhasil');
 
         await driver.sleep(2000);
-        await driver.quit();
     });
 })
