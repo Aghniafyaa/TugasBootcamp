@@ -1,0 +1,41 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Reports
+reports/
+allure-results/
+allure-report/
+
+# Screenshots
+reports/screenshots/
+
+# Coverage
+coverage/
+
+# Environment
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Appium
+.appium/
+
+# Temporary
+tmp/
+temp/
+
+# Package lock (optional)
+# package-lock.json
