@@ -37,6 +37,12 @@ export class LoginAction {
         await btn.waitForDisplayed({ timeout: 10000 })
         return await btn.isDisplayed()
     }
+
+    async isErrorDisplayed(){
+        const error = await $(loginPage.errorMessage)
+        await error.waitForDisplayed()
+        return error.isDisplayed()
+    }
 }
 
 export default new LoginAction()

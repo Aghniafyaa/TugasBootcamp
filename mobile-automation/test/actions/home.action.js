@@ -70,6 +70,38 @@ export class HomeAction {
         await element.click();
     }
 
+    async sortByNameAZ() {
+        await this.tapModalSelectorButton();
+
+        const element = await $(this.homePage.sortNameAZ);
+        await element.waitForDisplayed();
+        await element.click();
+    }
+
+    async sortByNameZA() {
+        await this.tapModalSelectorButton();
+
+        const element = await $(this.homePage.sortNameZA);
+        await element.waitForDisplayed();
+        await element.click();
+    }
+
+    async sortByPriceLowHigh() {
+        await this.tapModalSelectorButton();
+
+        const element = await $(this.homePage.sortPriceLowHigh);
+        await element.waitForDisplayed();
+        await element.click();
+    }
+
+    async sortByPriceHighLow() {
+        await this.tapModalSelectorButton();
+
+        const element = await $(this.homePage.sortPriceHighLow);
+        await element.waitForDisplayed();
+        await element.click();
+    }
+
     async tapCloseFilterButton() {
         const element = await $(this.homePage.closeFilterButton);
         await element.waitForDisplayed();
